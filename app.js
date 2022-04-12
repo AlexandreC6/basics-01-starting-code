@@ -1,7 +1,9 @@
 const app = Vue.createApp({
   data() {
     return {
+      firstMessage: "Just here !",
       message: 'Finish the course and learn Vue!',
+      messageB: "<h3>It's the messge B</h3>",
       vueLink: 'https://vuejs.org/'
     };
   },
@@ -10,9 +12,9 @@ const app = Vue.createApp({
       // Math.randon = JS function qui prend un numéro random entre 0 et 1
       const randonNumber = Math.random();
       if (randonNumber < 0.5 ) {
-        return "Learn Vue !";
+        return this.message;
       } else {
-        return "Master Vue!";
+        return this.messageB;
       }
     }
   }
